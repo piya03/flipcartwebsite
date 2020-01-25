@@ -1,4 +1,5 @@
 import React from "react"
+import BottomHeader from "./bottomheader.js"
 import "./common.css"
 
 class Header extends React.Component{
@@ -16,7 +17,10 @@ class Header extends React.Component{
                         <li><a href='#'>More</a></li>
                         <li><a href='#'><span><i class="fa fa-shopping-cart"></i></span>Cart</a></li>
                     </ul>
-                </div>
+                
+            <BottomHeader />
+            
+            </div>
             
         )
     }
