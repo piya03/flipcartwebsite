@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "./header.js"
+import BodyPage from "./bodyPage.js"
 import "./common.css"
 
 class MainPage extends React.Component{
@@ -10,6 +11,7 @@ class MainPage extends React.Component{
         return(
          <div>
              <Header />
+             <BodyPage />
          </div>
         )
     }
