@@ -1,6 +1,5 @@
 import React from "react"
 
-import "./body.css"
 import "./leftBody.css"
 class LeftPage extends React.Component{
     constructor(props){
