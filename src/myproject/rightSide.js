@@ -5,7 +5,7 @@ const ServerCardData = [{
     img: "https://img.etimg.com/thumb/msid-70101475,width-643,imgsize-366669,resizemode-4/skechers-gorun-7-helps-in-easy-foot-movement-and-provides-great-support-.jpg",
     disc: "men shoes",
     price: "1000 Rs",
-    color: "green",
+    color: "yellow",
     size: "5,6,7,8",
     brand: "ADIDAS"
 },
@@ -70,14 +70,20 @@ class RightPage extends React.Component {
         }
     }
 
+    changeData = (arr) => {
+        this.setState({
+            data: arr
+        })
+    }
+
     render() {
         const { data } = this.state
         return (
             <div className='rightbody-container'>
                 <div className='all-cards'>
-                    {data.map((each) => {
+                    {data.map((each, index) => {
                         return (
-                            <SingleCard cardData={each} />
+                            <SingleCard cardData={each} changeData={this.changeData} data={data} index={index}/>
 
                         )
                     })}
