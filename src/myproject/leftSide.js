@@ -1,9 +1,17 @@
 import React from "react"
-
+import Brand from "./brand.js"
 import "./leftBody.css"
 class LeftPage extends React.Component{
     constructor(props){
         super(props);
+        this.state = {
+            active  : true
+        }
+    }
+    showHide = (value) =>{
+     this.setState({
+         active  : !value
+     })
     }
     render(){
      
@@ -11,8 +19,9 @@ class LeftPage extends React.Component{
         <div className="leftside">
             <h5>Filters</h5>
             <div className="categories">
-                <p> CATEGORIES</p>
-                <div heading="Footwear" containerClass='footwear-text'>
+                <p>CATEGORIES</p>
+                <div containerClass='footwear-text'>
+                    <div className='footwear-text'><i class="fa fa-angle-down"></i> footwear</div>
                     <ul className="footwear-categories">
                         <li><a href='#'>Women's Footwear</a></li>
                         <li><a href='#'>Kids' & Infant Footwear</a></li>
@@ -48,7 +57,7 @@ class LeftPage extends React.Component{
                 </div>
             </div>
             {/* /////////////////// */}
-            {/* <Brand /> */}
+           <Brand />
         </div>
     )
     }
