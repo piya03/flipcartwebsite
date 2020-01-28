@@ -14,7 +14,7 @@ class LeftPage extends React.Component{
     }))
     }
     render(){
-     
+     const { active } = this.state
     return (
         <div className="leftside">
             <h5>Filters</h5>
@@ -22,6 +22,7 @@ class LeftPage extends React.Component{
                 <p>CATEGORIES</p>
                 <div containerClass='footwear-text'>
                     <div className='footwear-text'><i class="fa fa-angle-down" 
+                    style = {{transform: active ? 'rotate(0deg)' : 'rotate(-90deg)'}}
                     onClick={this.showHide}></i> footwear</div>
                    {this.state.active && <ul className="footwear-categories">
                         <li><a href='#'>Women's Footwear</a></li>

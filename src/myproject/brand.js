@@ -14,12 +14,13 @@ class Brand extends React.Component {
       }))
   }
   render() {
+      const { active } = this.state
     return (
       <div className="brand-categories">
         <div className="brand-text">
           <div>BRAND</div>
           <span>
-            <i class="fa fa-angle-down" onClick ={this.hideShow}></i>
+            <i class="fa fa-angle-down" style = {{transform: active? 'rotate(180deg)': 'rotate(0deg'}} onClick ={this.hideShow}></i>
           </span>
         </div>
        {this.state.active && <div className="brand-search-box">
