@@ -79,6 +79,8 @@
 .brand-text {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
 }
 
 .search-symbol {
@@ -124,4 +126,7 @@ input:focus .search-symbol {
 }
 .show-brand-list label {
     padding-left: 11px;
+}
+.brand-search-box {
+    width : 100%;
 }

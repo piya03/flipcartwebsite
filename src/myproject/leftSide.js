@@ -9,9 +9,9 @@ class LeftPage extends React.Component{
         }
     }
     showHide = (value) =>{
-     this.setState({
-         active  : !value
-     })
+    this.setState((pstate) => ({
+        active : !pstate.active
+    }))
     }
     render(){
      
@@ -21,12 +21,13 @@ class LeftPage extends React.Component{
             <div className="categories">
                 <p>CATEGORIES</p>
                 <div containerClass='footwear-text'>
-                    <div className='footwear-text'><i class="fa fa-angle-down"></i> footwear</div>
-                    <ul className="footwear-categories">
+                    <div className='footwear-text'><i class="fa fa-angle-down" 
+                    onClick={this.showHide}></i> footwear</div>
+                   {this.state.active && <ul className="footwear-categories">
                         <li><a href='#'>Women's Footwear</a></li>
                         <li><a href='#'>Kids' & Infant Footwear</a></li>
                         <li><a href='#'>Men's Footwear</a></li>
-                    </ul>
+                    </ul> }
 
                 </div>
             </div>
