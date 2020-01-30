@@ -1,11 +1,12 @@
 import React from "react"
 import Brand from "./brand.js"
+import CustomerRating from "./customerRating.js"
 import "./leftBody.css"
 class LeftPage extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            active  : true
+            active: true
         }
     }
     showHide = (value) =>{
@@ -60,6 +61,7 @@ class LeftPage extends React.Component{
             </div>
             {/* /////////////////// */}
            <Brand />
+           <CustomerRating />
         </div>
     )
     }
