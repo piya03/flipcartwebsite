@@ -1,5 +1,6 @@
 import React from "react"
 import BottomHeader from "./bottomheader.js"
+import Electronics from "./hoverpages/electronics.js"
 import "./common.css"
 
 class Header extends React.Component{
@@ -19,7 +20,6 @@ class Header extends React.Component{
                     </ul>
                 
             <BottomHeader />
-            
             </div>
             
         )
