@@ -87,6 +87,9 @@
       border-radius: 50px 50px 0 0;
   }
   .all-cards {
+    
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(263px, auto));
+    grid-column-gap: 10px;
+    justify-content: space-between;
   }

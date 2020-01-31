@@ -1,6 +1,7 @@
 import React from "react"
 import Brand from "./brand.js"
 import CustomerRating from "./customerRating.js"
+import Color from "./color.js"
 import "./leftBody.css"
 class LeftPage extends React.Component{
     constructor(props){
@@ -62,6 +63,7 @@ class LeftPage extends React.Component{
             {/* /////////////////// */}
            <Brand />
            <CustomerRating />
+           <Color />
         </div>
     )
     }

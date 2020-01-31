@@ -130,3 +130,28 @@ input:focus .search-symbol {
 .brand-search-box {
     width : 100%;
 }
+/* ////////////////color//////////// */
+.show-color-list .circle-color{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 6px;
+
+}
+.circle-color1{
+    background-color: beige;
+}
+.circle-color2{
+background-color: black;
+
+}
+.circle-color3{
+background-color: blue;
+}
+.circle-color4{
+background-color: brown;
+}
+.show-color-list label{
+    padding-left: 25px;
+}
