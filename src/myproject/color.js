@@ -16,6 +16,7 @@ class Color extends React.Component {
     }
     render() {
         const { active } = this.state
+        const { colorName } = this.props
         return (
             <div className="brand-categories">
                 <div className="brand-text">
@@ -32,25 +33,25 @@ class Color extends React.Component {
                                 type="checkbox"
                                 name="checkbox"
                                 id="checkbox_id"
-                                value="Beige"
+                                value="{colorName[0]}"
                             />
                             <span className='circle-color circle-color1'></span>
-                            <label for="checkbox_id">Beige</label>
+                            <label for="checkbox_id">{colorName[0]}</label>
                         </div>
                         <div>
-                            <input type="checkbox" name="checkbox" value="Black" />
+                            <input type="checkbox" name="checkbox" value="{colorName[1]}" />
                             <span className='circle-color circle-color2'></span>
-                            <label for="checkbox_id">Black</label>
+                            <label for="checkbox_id">{colorName[1]}</label>
                         </div>
                         <div>
-                            <input type="checkbox" name="checkbox" value="Blue" />
+                            <input type="checkbox" name="checkbox" value="{colorName[2]}" />
                             <span className='circle-color circle-color3'></span>
-                            <label for="checkbox_id">Blue</label>
+                            <label for="checkbox_id">{colorName[2]}</label>
                         </div>
                         <div>
-                            <input type="checkbox" name="checkbox" value="Brown" />
+                            <input type="checkbox" name="checkbox" value="{colorName[3]}" />
                             <span className='circle-color circle-color4'></span>
-                            <label for="checkbox_id">Brown</label>
+                            <label for="checkbox_id">{colorName[3]}</label>
                         </div>
 
                     </div>

@@ -61,9 +61,9 @@ class LeftPage extends React.Component{
                 </div>
             </div>
             {/* /////////////////// */}
-           <Brand />
+           <Brand brandName = {['Puma', 'REEBOK', 'Sparx', 'Asian', 'Lee Cooper', '1640 MORE']}/>
            <CustomerRating />
-           <Color />
+           <Color colorName= {['Beige', 'Black', 'Blue','Brown']}/>
         </div>
     )
     }

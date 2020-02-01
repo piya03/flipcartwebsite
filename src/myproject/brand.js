@@ -5,25 +5,26 @@ class Brand extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        active : true
+      active: true
     }
   }
-  hideShow = () =>{
-      this.setState((pstate) =>({
-          active: !pstate.active
-      }))
+  hideShow = () => {
+    this.setState((pstate) => ({
+      active: !pstate.active
+    }))
   }
   render() {
-      const { active } = this.state
+    const { active } = this.state
+    const { brandName } = this.props
     return (
       <div className="brand-categories">
         <div className="brand-text">
           <div>BRAND</div>
           <span>
-            <i class="fa fa-angle-down" style = {{transform: active? 'rotate(180deg)': 'rotate(0deg'}} onClick ={this.hideShow}></i>
+            <i class="fa fa-angle-down" style={{ transform: active ? 'rotate(180deg)' : 'rotate(0deg' }} onClick={this.hideShow}></i>
           </span>
         </div>
-       {this.state.active && <div className="brand-search-box">
+        {this.state.active && <div className="brand-search-box">
           <div className="search-symbol">
             <span>
               <i class="fa fa-search"></i>{" "}
@@ -36,29 +37,29 @@ class Brand extends React.Component {
                 type="checkbox"
                 name="checkbox"
                 id="checkbox_id"
-                value="Puma"
+                value="{brandName[0]}"
               />
-              <label for="checkbox_id">Puma</label>
+              <label for="checkbox_id">{brandName[0]}</label>
             </div>
             <div>
-              <input type="checkbox" name="checkbox" value="REEBOK" />
-              <label for="checkbox_id">REEBOK</label>
+              <input type="checkbox" name="checkbox" value="{brandName[1]}" />
+              <label for="checkbox_id">{brandName[1]}</label>
             </div>
             <div>
-              <input type="checkbox" name="checkbox" value="Sparx" />
-              <label for="checkbox_id">Sparx</label>
+              <input type="checkbox" name="checkbox" value="{brandName[2]}" />
+              <label for="checkbox_id">{brandName[2]}</label>
             </div>
             <div>
-              <input type="checkbox" name="checkbox" value="Asian" />
-              <label for="checkbox_id">Asian</label>
+              <input type="checkbox" name="checkbox" value="{brandName[3]}" />
+              <label for="checkbox_id">{brandName[3]}</label>
             </div>
             <div>
-              <input type="checkbox" name="checkbox" value="Lee Cooper" />
-              <label for="checkbox_id">Lee Cooper</label>
+              <input type="checkbox" name="checkbox" value="{brandName[4]}" />
+              <label for="checkbox_id">{brandName[4]}</label>
             </div>
-            <span className="more-brand"> 1640 MORE</span>
+            <span className="more-brand"> {brandName[5]}</span>
           </div>
-    </div> }
+        </div>}
       </div>
     );
   }
