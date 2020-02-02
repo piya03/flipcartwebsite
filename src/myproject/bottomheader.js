@@ -4,32 +4,32 @@ import Electronics from "./hoverpages/electronics.js"
 
 
 class ElectronicsCompound extends React.Component {
-state = {
-    show: false
-}
-render() {
-    const { label, content } = this.props
-    const { show } = this.state
-    return (
-        <div>
-            <li 
-            onMouseOver={() => {
-                this.setState({
-                    show: true
-                })
-            }}
-            onMouseLeave={() => {
-                this.setState({
-                    show: false
-                })
-            }}
-            >{label} <i class="fa fa-angle-down"></i>
-            {show && <Electronics content1= {content} />}
-            </li>
-            
-        </div>
-    )
-}
+    state = {
+        show: false
+    }
+    render() {
+        const { label, content, children } = this.props
+        const { show } = this.state
+        return (
+            <div>
+                <li
+                    onMouseOver={() => {
+                        this.setState({
+                            show: true
+                        })
+                    }}
+                    onMouseLeave={() => {
+                        this.setState({
+                            show: false
+                        })
+                    }}
+                >{label} <i class="fa fa-angle-down"></i>
+                    {show && <Electronics content1={content} children={children}/>}
+                </li>
+
+            </div>
+        )
+    }
 }
 
 function BottomHeader() {
@@ -37,14 +37,78 @@ function BottomHeader() {
         <div className="bottom-header">
             <div class="container">
                 <ul class="bottom-header-ul">
-                <ElectronicsCompound label="Electronics" content ="i am "></ElectronicsCompound>
-                <ElectronicsCompound label="TVs & Appliances" content ="i tv "></ElectronicsCompound>
-                <ElectronicsCompound label="Men" content ="i men "></ElectronicsCompound>
-                <ElectronicsCompound label="Women" content ="i women "></ElectronicsCompound>
-                <ElectronicsCompound label="Baby & Kids" content ="i baby "></ElectronicsCompound>
-                <ElectronicsCompound label="Home & Furniture" content ="i home"></ElectronicsCompound>
-                <ElectronicsCompound label="Sports, Books & More" content="i book"></ElectronicsCompound>
-                <ElectronicsCompound label="Offer Zone" content ="i offer "></ElectronicsCompound>
+                    <ElectronicsCompound label="Electronics" >
+                        <ul>
+                            <li>Phone</li>
+                            <li>Charger</li>
+                            <li>Laptop</li>
+                            <li>Phone</li>
+                            <li>Phone</li>
+                        </ul>
+                    </ElectronicsCompound>
+                    <ElectronicsCompound label="TVs & Appliances" content="i tv ">
+                        <ul>
+                            <li>Phone</li>
+                            <li>Charger</li>
+                            <li>Laptop</li>
+                            <li>Phone</li>
+                            <li>Phone</li>
+                        </ul>
+                    </ElectronicsCompound>
+                    <ElectronicsCompound label="Men" content="i men ">
+                        <ul>
+                            <li>Phone</li>
+                            <li>Charger</li>
+                            <li>Laptop</li>
+                            <li>Phone</li>
+                            <li>Phone</li>
+                        </ul>
+                    </ElectronicsCompound>
+                    <ElectronicsCompound label="Women" content="i women ">
+                        <ul>
+                            <li>Phone</li>
+                            <li>Charger</li>
+                            <li>Laptop</li>
+                            <li>Phone</li>
+                            <li>Phone</li>
+                        </ul>
+                    </ElectronicsCompound>
+                    <ElectronicsCompound label="Baby & Kids" content="i baby ">
+                        <ul>
+                            <li>Phone</li>
+                            <li>Charger</li>
+                            <li>Laptop</li>
+                            <li>Phone</li>
+                            <li>Phone</li>
+                        </ul>
+                    </ElectronicsCompound>
+                    <ElectronicsCompound label="Home & Furniture" content="i home">
+                        <ul>
+                            <li>Phone</li>
+                            <li>Charger</li>
+                            <li>Laptop</li>
+                            <li>Phone</li>
+                            <li>Phone</li>
+                        </ul>
+                    </ElectronicsCompound>
+                    <ElectronicsCompound label="Sports, Books & More" content="i book">
+                        <ul>
+                            <li>Phone</li>
+                            <li>Charger</li>
+                            <li>Laptop</li>
+                            <li>Phone</li>
+                            <li>Phone</li>
+                        </ul>
+                    </ElectronicsCompound>
+                    <ElectronicsCompound label="Offer Zone" content="i offer ">
+                        <ul>
+                            <li>Phone</li>
+                            <li>Charger</li>
+                            <li>Laptop</li>
+                            <li>Phone</li>
+                            <li>Phone</li>
+                        </ul>
+                    </ElectronicsCompound>
 
                 </ul>
             </div>

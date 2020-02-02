@@ -16,6 +16,7 @@ class SingleCard extends React.Component {
         } else {
             finalHeartClass = `${finalHeartClass} red-heart`
         }
+        
         return (
 
 
@@ -36,7 +37,7 @@ class SingleCard extends React.Component {
                 </div>
                 <div className="card-bottom">
                     <div className="brand">{brand}</div>
-                    <div className='discription'>{disc}</div>
+                <div className='discription'><span>{disc}</span><img src="https://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/fa_8b4b59.png" /></div>
                     <div className='price'>{price}</div>
                     <div className='size'><span className="text-size">Size </span>{size}</div>
                 </div>

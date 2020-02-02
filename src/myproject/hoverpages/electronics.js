@@ -10,7 +10,7 @@ class Electronics extends React.Component{
     render(){
         return(
          <div className='electronic-page'>
-       {this.props.content1}
+       {this.props.children}
             
          </div>
         )
