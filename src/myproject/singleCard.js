@@ -9,11 +9,18 @@ class SingleCard extends React.Component {
     render() {
         const { changeData, data, index} = this.props
         const { img, disc, price, color, size, brand } = this.props.cardData
+
+        let finalHeartClass = "circle"
+        if(data[index].color === "green") {
+            finalHeartClass = `${finalHeartClass} green-heart`
+        } else {
+            finalHeartClass = `${finalHeartClass} red-heart`
+        }
         return (
 
 
             <div className='singleCard'>
-                <div className='circle' style={{ backgroundColor: color }}
+                <div className={finalHeartClass} style={{ backgroundColor: color }}
                     onClick={() => {
                         const newData = [...data]
                         if (color === "green") {

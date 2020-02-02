@@ -5,7 +5,7 @@ const ServerCardData = [{
     img: "https://img.etimg.com/thumb/msid-70101475,width-643,imgsize-366669,resizemode-4/skechers-gorun-7-helps-in-easy-foot-movement-and-provides-great-support-.jpg",
     disc: "men shoes",
     price: "1000 Rs",
-    color: "yellow",
+    color: "green",
     size: "5,6,7,8",
     brand: "ADIDAS"
 },
